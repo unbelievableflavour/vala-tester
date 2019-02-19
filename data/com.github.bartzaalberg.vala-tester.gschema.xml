@@ -1,0 +1,45 @@
+<schemalist>
+  <schema id="com.github.bartzaalberg.vala-tester" path="/com/github/bartzaalberg/vala-tester/" gettext-domain="my-app">
+	<key name="window-maximized" type="b">
+	  <default>false</default>
+	  <summary>Maximized</summary>
+	  <description>Whether the window is maximized</description>
+	</key>
+	<key name="window-position" type="(ii)">
+	  <default>(1024, 750)</default>
+	  <summary>Window position</summary>
+	  <description>Most recent window position (x, y)</description>
+	</key>
+	<key name="window-size" type="(ii)">
+	  <default>(-1, -1)</default>
+	  <summary>Window size</summary>
+	  <description>Most recent window size (width, height)</description>
+	</key>
+   <key name="style-scheme" type="s">
+		<default>'classic'</default>
+		<summary>Preferred Style Scheme</summary>
+		<description>Set the preferred style scheme.</description>
+	</key>
+	<key name="use-system-font" type="b">
+		<default>true</default>
+		<summary>Use system font</summary>
+		<description>Whether Scratch should use the default system font</description>
+	</key>
+	<key name="font" type="s">
+		<default>'Droid Sans Mono 10'</default>
+		<summary>Preferred Font</summary>
+		<description>Set the preferred font.</description>
+	</key>
+	<key name="vala-version" type="s">
+		<default>''</default>
+		<summary>The Vala version you are using</summary>
+		<description>Set the preferred Vala version.</description>
+	</key>
+	<key name="vala-path" type="s">
+		<default>'/usr/bin'</default>
+		<summary>The Vala path</summary>
+		<description>This path is used to search for Vala. If this path is wrong the application wont be able to operate</description>
+	</key>
+  </schema>
+</schemalist>
+

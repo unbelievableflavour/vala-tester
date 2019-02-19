@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.github.bartzaalberg.vala-tester</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Vala Tester</name>
+  <summary>Test some Vala code!</summary>
+  <description>
+    <p>A simple tool to test your Vala code.</p>
+    <p>Features:</p>
+     <ul>
+       <li>Code without having to start a whole project!</li>
+       <li>Switch Vala versions on the fly!</li>
+       <li>Copy your snippet with a simple click on a button!</li>
+       <li>Continue where you left off last time</li>
+       <li>Run your code with a simple shortcut! (ctrl + r)</li>
+       <li>Choose a cool theme to code in</li>
+    </ul>
+  </description>
+  <provides>
+    <binary>com.github.bartzaalberg.vala-tester</binary>
+  </provides>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+  <releases>
+    <release version="1.0.0" date="2019-02-19">
+      <description>
+        <p>First release</p>
+        <ul>
+          <li>First release</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/bartzaalberg/vala-tester/master/screenshot.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/bartzaalberg/vala-tester/master/screenshot2.png</image>
+    </screenshot>
+  </screenshots>
+  <developer_name>Bart Zaalberg</developer_name>
+  <custom>
+    <value key="x-appcenter-color-primary">rgb(100, 87, 133)</value>
+    <value key="x-appcenter-color-primary-text">#FFF</value>
+  </custom>
+  <url type="homepage">https://github.com/bartzaalberg/vala-tester</url>
+  <url type="bugtracker">https://github.com/bartzaalberg/vala-tester/issues</url>
+  <url type="help">https://github.com/bartzaalberg/vala-tester/issues</url>
+</component>

@@ -1,0 +1,6 @@
+@define-color textColorPrimary @WHITE_300;
+@define-color textColorPrimaryShadow alpha(shade(@colorPrimary, 0.6), 0.4);
+
+.titlebar button.combo * {
+  color: inherit;
+}
