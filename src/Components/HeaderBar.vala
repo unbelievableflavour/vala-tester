@@ -87,7 +87,7 @@ public class HeaderBar : Gtk.HeaderBar {
     }
 
     private void generate_start_button () {
-        start_button.set_tooltip_text (_("Run the code"));
+        start_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>R"}, _("Run the code"));
         start_button.clicked.connect (() => {
             file_manager.run_code ();
         });
