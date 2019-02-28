@@ -1,3 +1,10 @@
+com.github.bartzaalberg.vala-tester (1.0.1) UNSTABLE; urgency=low
+
+  * Added new app icon
+  * Changed cheatsheet label
+
+ -- Bart Zaalberg <bartzaalberg@gmail.com>  Thu, 28 Feb 2019 17:00:00 +0200
+
 com.github.bartzaalberg.vala-tester (1.0.0) UNSTABLE; urgency=low
 
   * First release
