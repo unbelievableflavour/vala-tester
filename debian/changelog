@@ -1,3 +1,11 @@
+com.github.bartzaalberg.vala-tester (1.1.0) STABLE; urgency=low
+
+  * Removed the cheatsheet
+  * Added key shortcuts where possible
+  * Fixed app icon text bug
+
+ -- Bart Zaalberg <bartzaalberg@gmail.com>  Mon, 04 Mar 2019 17:19:00 +0200
+
 com.github.bartzaalberg.vala-tester (1.0.1) UNSTABLE; urgency=low
 
   * Added new app icon

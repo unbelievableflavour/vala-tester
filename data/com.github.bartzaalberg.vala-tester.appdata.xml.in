@@ -50,6 +50,16 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="1.1.0" date="2019-03-04">
+      <description>
+        <p>Made cheatsheet unnecessary</p>
+        <ul>
+          <li>Removed the cheatsheet</li>
+          <li>Added shortcuts where possible</li>
+          <li>Fixed app icon text bug</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2019-02-28">
       <description>
         <p>First release</p>
