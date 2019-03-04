@@ -17,6 +17,7 @@ public class HeaderBar : Gtk.HeaderBar {
     Gtk.MenuButton menu_button = new Gtk.MenuButton ();
     Gtk.Menu settings_menu = new Gtk.Menu ();
     Gtk.ComboBox combo_box = new Gtk.ComboBox ();
+    Gtk.AccelGroup accel_group = new Gtk.AccelGroup ();
 
     enum Column {
         VERSION
@@ -98,12 +99,16 @@ public class HeaderBar : Gtk.HeaderBar {
         copy_menu_button.tooltip_text = (_("Copy input or output"));
         copy_menu_button.set_image (new Gtk.Image.from_icon_name ("edit-copy-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
 
-         var copy_input = new Gtk.MenuItem.with_label (_("Copy Input"));
+        var copy_input = new Gtk.MenuItem.with_label (_("Copy Input"));
+        copy_input.add_accelerator ("activate", accel_group,
+            Gdk.Key.i, Gdk.ModifierType.CONTROL_MASK, Gtk.AccelFlags.VISIBLE);
         copy_input.activate.connect (() => {
             clipboard.set_text (source_view_manager.get_view ().buffer.text, -1);
         });
 
         var copy_output = new Gtk.MenuItem.with_label (_("Copy Output"));
+        copy_output.add_accelerator ("activate", accel_group,
+            Gdk.Key.o, Gdk.ModifierType.CONTROL_MASK, Gtk.AccelFlags.VISIBLE);
         copy_output.activate.connect (() => {
             clipboard.set_text (source_view_manager.get_result ().buffer.text, -1);
         });
@@ -118,20 +123,14 @@ public class HeaderBar : Gtk.HeaderBar {
 
     private void generate_settings_menu () {
         menu_button.has_tooltip = true;
-        menu_button.tooltip_text = (_("Settings"));
+        menu_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>S"}, _("Settings"));
         menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
-
-        var cheatsheet = new Gtk.MenuItem.with_label (_("Cheatsheet"));
-        cheatsheet.activate.connect (() => {
-            new Cheatsheet ();
-        });
 
         var preferences = new Gtk.MenuItem.with_label (_("Preferences"));
         preferences.activate.connect (() => {
             new Preferences ();
         });
 
-        settings_menu.add (cheatsheet);
         settings_menu.add (new Gtk.SeparatorMenuItem ());
         settings_menu.add (preferences);
         settings_menu.show_all ();

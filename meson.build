@@ -21,7 +21,6 @@ executable(
     'src/ValaVersionManager.vala',
     'src/FileManager.vala',
     'src/Dialogs/Alert.vala',
-    'src/Dialogs/Cheatsheet.vala',
     'src/Dialogs/Preferences.vala',
     'src/Components/HeaderBar.vala',
     'src/Components/HeaderLabel.vala',
