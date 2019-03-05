@@ -14,8 +14,7 @@ public class HeaderBar : Gtk.HeaderBar {
     Gtk.Button start_button = new Gtk.Button.from_icon_name ("media-playback-start-symbolic");
     Gtk.MenuButton copy_menu_button = new Gtk.MenuButton ();
     Gtk.Menu copy_menu = new Gtk.Menu ();
-    Gtk.MenuButton menu_button = new Gtk.MenuButton ();
-    Gtk.Menu settings_menu = new Gtk.Menu ();
+    Gtk.Button menu_button = new Gtk.Button.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
     Gtk.ComboBox combo_box = new Gtk.ComboBox ();
     Gtk.AccelGroup accel_group = new Gtk.AccelGroup ();
 
@@ -35,7 +34,7 @@ public class HeaderBar : Gtk.HeaderBar {
         get_active_dropdown_index_and_set ();
         generate_start_button ();
         generate_copy_menu ();
-        generate_settings_menu ();
+        generate_menu_button ();
 
         this.add (combo_box);
         this.pack_start (start_button);
@@ -121,21 +120,11 @@ public class HeaderBar : Gtk.HeaderBar {
         copy_menu_button.popup = copy_menu;
     }
 
-    private void generate_settings_menu () {
-        menu_button.has_tooltip = true;
+    private void generate_menu_button () {
         menu_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>S"}, _("Settings"));
-        menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
-
-        var preferences = new Gtk.MenuItem.with_label (_("Preferences"));
-        preferences.activate.connect (() => {
+        menu_button.clicked.connect (() => {
             new Preferences ();
         });
-
-        settings_menu.add (new Gtk.SeparatorMenuItem ());
-        settings_menu.add (preferences);
-        settings_menu.show_all ();
-
-        menu_button.popup = settings_menu;
     }
 }
 }
