@@ -19,11 +19,18 @@ A Vala application to test Vala snippets without the hassle.
 
 ## Installation
 
+### Arch Linux
+Arch Linux users can find `Vala Tester` under the name [vala-tester-git](https://aur.archlinux.org/packages/vala-tester-git/) in the **AUR**:
+
+`$ aurman -S vala-tester-git`
+
+### Ubuntu Derivatives
+
 First you will need to install elementary SDK
 
  `sudo apt install elementary-sdk`
 
-### Dependencies
+#### Dependencies
 
 These dependencies must be present before building
  - `valac`
@@ -35,15 +42,15 @@ These dependencies must be present before building
 
  `sudo apt install valac libgtk-3-dev libgranite-dev gtksourceview-3.0`
 
-### Building
+#### Building
 ```
 meson build --prefix=/usr
 cd build
 ninja
 ```
 
-### Installing
+#### Installing
 `sudo ninja install`
 
-### Recompile the schema after installation
+#### Recompile the schema after installation
 `sudo glib-compile-schemas /usr/share/glib-2.0/schemas`
