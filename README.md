@@ -54,3 +54,8 @@ ninja
 
 #### Recompile the schema after installation
 `sudo glib-compile-schemas /usr/share/glib-2.0/schemas`
+
+### Update .pot file
+Call the following command from the build folder:
+
+`ninja com.github.bartzaalberg.vala-tester-pot`
