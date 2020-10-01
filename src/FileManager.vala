@@ -80,7 +80,7 @@ public class FileManager : Object {
         var valaversion = settings.get_string ("vala-version");
 
         try {
-            Process.spawn_command_line_sync ("/usr/bin/" + valaversion + " valatest.vala",
+            Process.spawn_command_line_sync ("/usr/bin/" + valaversion + " --pkg gtk+-3.0 valatest.vala",
             out result,
             out error,
             out status
