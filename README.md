@@ -1,3 +1,6 @@
+# Archived
+This repository is not maintained anymore and will not be updated to Elementary OS 6.0. You have my blessing to create a fork and update the application to post publish it in Elementary 6.0 under your own name. 
+
 # Vala Tester
 Test your Vala code easily
 
